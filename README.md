@@ -81,25 +81,7 @@ Este comando executa:
 1. Verificação de tipos com TypeScript (`tsc --noEmit`)
 2. Testes com Jest
 
-### Executar testes em modo watch
 
-Para executar os testes continuamente enquanto edita:
-
-```bash
-npx jest --watch
-```
-
-### Executar teste de um arquivo específico
-
-```bash
-npx jest <caminho-do-arquivo>.spec.ts
-```
-
-Exemplo:
-
-```bash
-npx jest src/domain/customer/entity/customer.spec.ts
-```
 
 ## 🧪 Testes
 
@@ -184,31 +166,6 @@ Lógica de negócio que envolve múltiplas entidades.
 | test | `npm test` | Verifica tipos e executa testes |
 | compile | `npm run tsc` | Compila TypeScript para JavaScript |
 
-## 💡 Exemplo de Uso
-
-### Criar um Cliente
-
-```typescript
-import { CustomerFactory } from './domain/customer/factory/customer.factory';
-import { Address } from './domain/customer/value-object/address';
-
-const factory = new CustomerFactory();
-const customer = factory.create({
-  name: 'João Silva',
-  address: new Address('Rua A', 123, 'Apt 456', 'São Paulo', 'SP'),
-  active: true
-});
-```
-
-### Usar um Repositório
-
-```typescript
-import { CustomerRepository } from './infrastructure/customer/repository/sequelize/customer.repository';
-
-const repository = new CustomerRepository();
-await repository.create(customer);
-const foundCustomer = await repository.find(customerId);
-```
 
 ## 📝 Estrutura de Pastas
 
@@ -230,31 +187,3 @@ fc-ddd-patterns/
 ├── package.json                 # Dependências do projeto
 └── README.md                    # Este arquivo
 ```
-
-## 🤝 Contribuindo
-
-Para contribuir com melhorias:
-
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
-Certifique-se de que todos os testes passam:
-
-```bash
-npm test
-```
-
-## 📄 Licença
-
-Este projeto está licenciado sob a licença MIT.
-
-## 📞 Suporte
-
-Se tiver dúvidas ou encontrar problemas, abra uma issue no repositório.
-
----
-
-**Desenvolvido com ❤️ usando TypeScript e DDD**
