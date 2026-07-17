@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿# FC DDD Patterns
 
 Um projeto de exemplo implementando padrões de **Domain-Driven Design (DDD)** em TypeScript, com enfoque em boas práticas de arquitetura limpa e testes automatizados.
@@ -258,3 +259,6 @@ Se tiver dúvidas ou encontrar problemas, abra uma issue no repositório.
 ---
 
 **Desenvolvido com ❤️ usando TypeScript e DDD**
+=======
+# fc-ddd-patterns
+>>>>>>> fe985a2fc65f15c2905b764fca413e2293557e87
